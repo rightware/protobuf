@@ -47,6 +47,7 @@ namespace util {
 namespace converter {
 
 namespace {
+using std::map;
 // A TypeInfo that looks up information provided by a TypeResolver.
 class TypeInfoForTypeResolver : public TypeInfo {
  public:

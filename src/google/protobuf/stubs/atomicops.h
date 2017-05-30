@@ -73,7 +73,7 @@ typedef int64 Atomic64;
 #endif
 #else
 typedef int32 Atomic32;
-#ifdef GOOGLE_PROTOBUF_ARCH_64_BIT
+#if defined(GOOGLE_PROTOBUF_ARCH_64_BIT) || defined(GOOGLE_PROTOBUF_ARCH_AARCH64)
 // We need to be able to go between Atomic64 and AtomicWord implicitly.  This
 // means Atomic64 and AtomicWord should be the same type on 64-bit.
 #if defined(__ILP32__) || defined(GOOGLE_PROTOBUF_OS_NACL)
@@ -145,7 +145,7 @@ Atomic32 Acquire_Load(volatile const Atomic32* ptr);
 Atomic32 Release_Load(volatile const Atomic32* ptr);
 
 // 64-bit atomic operations (only available on 64-bit processors).
-#ifdef GOOGLE_PROTOBUF_ARCH_64_BIT
+#if defined(GOOGLE_PROTOBUF_ARCH_64_BIT) || defined(GOOGLE_PROTOBUF_ARCH_AARCH64) 
 Atomic64 NoBarrier_CompareAndSwap(volatile Atomic64* ptr,
                                   Atomic64 old_value,
                                   Atomic64 new_value);

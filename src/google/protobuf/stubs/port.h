@@ -44,7 +44,7 @@
 #include <stdint.h>
 #endif
 
-#undef PROTOBUF_LITTLE_ENDIAN
+//#undef PROTOBUF_LITTLE_ENDIAN
 #ifdef _WIN32
   // Assuming windows is always little-endian.
   // TODO(xiaofeng): The PROTOBUF_LITTLE_ENDIAN is not only used for
@@ -387,7 +387,7 @@ LIBPROTOBUF_EXPORT uint32 ghtonl(uint32 x);
 
 class BigEndian {
  public:
-#ifdef PROTOBUF_LITTLE_ENDIAN
+#if 1// def PROTOBUF_LITTLE_ENDIAN
 
   static uint16 FromHost16(uint16 x) { return bswap_16(x); }
   static uint16 ToHost16(uint16 x) { return bswap_16(x); }

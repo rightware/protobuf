@@ -42,6 +42,8 @@ namespace protobuf {
 namespace compiler {
 namespace csharp {
 
+using std::map;
+
 class FieldGeneratorBase : public SourceGeneratorBase {
  public:
   FieldGeneratorBase(const FieldDescriptor* descriptor,

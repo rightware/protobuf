@@ -44,6 +44,8 @@ namespace protobuf {
 namespace compiler {
 namespace objectivec {
 
+using std::map;
+
 // Generator options (see objectivec_generator.cc for a description of each):
 struct Options {
   Options();

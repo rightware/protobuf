@@ -38,6 +38,8 @@ namespace protobuf {
 namespace util {
 
 using google::protobuf::FieldMask;
+using std::map;
+
 
 string FieldMaskUtil::ToString(const FieldMask& mask) {
   return Join(mask.paths(), ",");

@@ -47,6 +47,8 @@
 namespace google {
 namespace protobuf {
 
+using std::map;
+
 // Defined in this file.
 class DescriptorDatabase;
 class SimpleDescriptorDatabase;

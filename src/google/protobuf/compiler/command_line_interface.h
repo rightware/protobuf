@@ -308,7 +308,7 @@ class LIBPROTOC_EXPORT CommandLineInterface {
     CodeGenerator* generator;
     string help_text;
   };
-  typedef map<string, GeneratorInfo> GeneratorMap;
+  typedef std::map<string, GeneratorInfo> GeneratorMap;
   GeneratorMap generators_by_flag_name_;
   GeneratorMap generators_by_option_name_;
   // A map from generator names to the parameters specified using the option

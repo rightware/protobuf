@@ -46,6 +46,8 @@ namespace google {
 namespace protobuf {
 namespace io {
 
+using std::map;
+
 class ZeroCopyOutputStream;     // zero_copy_stream.h
 
 // Records annotations about a Printer's output.
